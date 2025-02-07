@@ -55,9 +55,10 @@ export default function About() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          I'm an AI Engineer passionate about making artificial intelligence more
-          accessible and understandable through practical examples and clear
-          explanations.
+          I'm Wael Feriz, an AI Engineer driven by a passion for turning complex AI concepts
+           into practical, real-world applications. I thrive on building intelligent systems
+            that enhance decision-making, automate processes, and unlock new possibilities
+             with machine learning.
         </motion.p>
 
         <motion.div
@@ -67,30 +68,15 @@ export default function About() {
         >
           <motion.h2 variants={item}>Background</motion.h2>
           <motion.p variants={item}>
-            With several years of experience in machine learning and deep learning,
-            I've worked on various projects ranging from natural language processing
-            to computer vision. I'm particularly interested in transformer
-            architectures and their applications across different domains.
+            With a strong foundation in machine learning, deep learning, and AI-driven solutions, I've worked across diverse industries, applying AI to improve search, automation, and user experiences. I enjoy exploring the latest advancements in transformer architectures, NLP, and computer vision, always looking for innovative ways to push AI beyond traditional boundaries.
+
+            Beyond my professional work, I actively contribute to the AI community, sharing insights, mentoring others, and engaging in discussions about the future of artificial intelligence.
           </motion.p>
 
-          <motion.h2 variants={item}>Skills</motion.h2>
-          <motion.ul variants={item}>
-            <li>Deep Learning (PyTorch, TensorFlow)</li>
-            <li>Natural Language Processing</li>
-            <li>Computer Vision</li>
-            <li>MLOps & Model Deployment</li>
-            <li>Full Stack Development</li>
-          </motion.ul>
-
-          <motion.h2 variants={item}>Code Sample</motion.h2>
-          <motion.p variants={item}>Here's a simple example of a PyTorch training loop:</motion.p>
-          <motion.div 
-            variants={item}
-            whileHover={{ scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <CodeBlock code={SAMPLE_CODE} language="python" />
-          </motion.div>
+          <motion.h2 variants={item}>My AI Philosophy</motion.h2>
+          <motion.p variants={item}>
+          AI is more than just algorithms—it’s a way to amplify human potential. I believe in building intelligent systems that are intuitive, adaptable, and impactful. For me, AI isn’t just about accuracy; it’s about creating technology that truly understands, assists, and enhances human decision-making. The future of AI isn’t just about what machines can do, but how they collaborate with us to shape a smarter world.
+          </motion.p>
 
           <motion.h2 variants={item}>Connect With Me</motion.h2>
           <motion.div
