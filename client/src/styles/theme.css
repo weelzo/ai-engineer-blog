@@ -1,0 +1,11 @@
+:root[data-theme='light'] {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  /* ... other light theme variables ... */
+}
+
+:root[data-theme='dark'] {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  /* ... other dark theme variables ... */
+}  
