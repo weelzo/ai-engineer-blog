@@ -11,10 +11,10 @@ interface Post {
   export const posts: Post[] = [
     {
       id: 1,
-      slug: 'understanding-transformers',
-      title: 'Understanding Transformer Architecture',
-      excerpt: 'Deep dive into the architecture that revolutionized natural language processing...',
-      date: '2024-01-15',
+      slug: 'reimagining-transformer',
+      title: 'Reimagining the Transformer',
+      excerpt: 'Beyond Conventional Explanations...',
+      date: '2024-10-02',
       tags: ['NLP', 'Transformers', 'Deep Learning'],
       content: '' // Will be loaded from markdown file
     },

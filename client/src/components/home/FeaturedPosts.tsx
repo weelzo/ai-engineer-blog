@@ -6,11 +6,11 @@ import { Badge } from "@/components/ui/badge";
 const FEATURED_POSTS = [
   {
     id: 1,
-    slug: "understanding-transformers",
-    title: "Understanding Transformer Architecture",
+    slug: "reimagining-transformer",
+    title: "Reimagining the Transformer",
     excerpt:
-      "Deep dive into the architecture that revolutionized natural language processing...",
-    date: "2024-01-15",
+      "Beyond Conventional Explanations...",
+    date: "2025-10-02",
     tags: ["NLP", "Transformers", "Deep Learning"],
   },
   {

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +13,32 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    // Check localStorage and system preference on initial load
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPreference = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return savedTheme || (systemPreference ? 'dark' : 'light');
+    }
+    return 'light';
+  });
   const [location] = useLocation();
+
+  useEffect(() => {
+    // Update DOM and localStorage when theme changes
+    const root = document.documentElement;
+    localStorage.setItem('theme', theme);
+    
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+  };
 
   return (
     <nav className="sticky top-0 z-50 w-full backdrop-blur-lg border-b border-border/40">
@@ -21,12 +46,12 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <Link href="/">
             <span className="text-xl font-bold bg-gradient-to-r from-[#00ff9d] to-[#0af] text-transparent bg-clip-text">
-              AI Engineer Blog
+              AI Engineer's Notebook
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-6 items-center">
             {NAV_ITEMS.map((item) => (
               <Link key={item.path} href={item.path}>
                 <span
@@ -47,17 +72,37 @@ export default function Navbar() {
             >
               GitHub
             </a>
+            
+            {/* Theme Toggle Button - Desktop */}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="ml-2"
+            >
+              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+            </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X /> : <Menu />}
-          </Button>
+          <div className="flex items-center gap-2 md:hidden">
+            {/* Theme Toggle Button - Mobile */}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+            >
+              {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+            </Button>
+
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X /> : <Menu />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

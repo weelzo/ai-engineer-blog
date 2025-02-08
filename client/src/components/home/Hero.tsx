@@ -34,11 +34,10 @@ export default function Hero() {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Welcome to my{" "}
           <span className="bg-gradient-to-r from-[#00ff9d] to-[#0af] text-transparent bg-clip-text">
-            AI Engineering
+            AI Engineer's
           </span>{" "}
-          Blog
+          Notebook
         </h1>
 
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
