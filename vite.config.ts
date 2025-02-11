@@ -25,7 +25,6 @@ export default defineConfig({
     }
   },
   assetsInclude: ['**/*.md'],
-  base: "/ai-engineer-blog/",
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true
