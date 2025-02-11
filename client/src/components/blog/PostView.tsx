@@ -10,29 +10,19 @@ export default function PostView() {
   const post = posts.find((p) => p.slug === params?.slug);
 
   useEffect(() => {
-    if (post) {
-      console.log('Attempting to load:', post.slug);
-      const markdownPath = `/src/data/posts/${post.slug}.md`;
-      console.log('Full path:', markdownPath);
+    async function loadPost() {
+      if (!post) return;
       
-      fetch(markdownPath)
-        .then((res) => {
-          console.log('Response status:', res.status);
-          if (!res.ok) {
-            console.error(`Failed to load post: ${res.status}`);
-            throw new Error('Failed to load post');
-          }
-          return res.text();
-        })
-        .then((text) => {
-          console.log('Content loaded, first 50 chars:', text.substring(0, 50));
-          setContent(text);
-        })
-        .catch((error) => {
-          console.error('Detailed error:', error);
-          setContent('Failed to load post content');
-        });
+      try {
+        const markdownModule = await import(`../../data/posts/${post.slug}.md?raw`);
+        setContent(markdownModule.default);
+      } catch (error) {
+        console.error('Error loading post:', error);
+        setContent('Failed to load post content');
+      }
     }
+    
+    loadPost();
   }, [post]);
 
   if (!post) {
