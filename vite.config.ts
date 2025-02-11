@@ -13,7 +13,7 @@ export default defineConfig({
   base: '/ai-engineer-blog/',
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "client", "src"),
+      "@": path.resolve(__dirname, "client/src"),
       "@shared": path.resolve(__dirname, "shared"),
     },
   },
