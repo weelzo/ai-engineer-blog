@@ -10,6 +10,7 @@ const __dirname = dirname(__filename);
 
 export default defineConfig({
   plugins: [react(), runtimeErrorOverlay(), themePlugin()],
+  base: '/ai-engineer-blog/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src"),

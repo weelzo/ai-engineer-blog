@@ -1,4 +1,24 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Router as WouterRouter } from "wouter";
+import { useState, useEffect } from "react";
+
+// Custom hook for GitHub Pages base path
+const useBasePath = () => {
+  const base = '/ai-engineer-blog';
+  const [path, setPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handleLocation = () => {
+      const newPath = window.location.pathname.replace(base, '') || '/';
+      setPath(newPath);
+    };
+
+    handleLocation();
+    window.addEventListener('popstate', handleLocation);
+    return () => window.removeEventListener('popstate', handleLocation);
+  }, []);
+
+  return path;
+};
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -19,6 +39,8 @@ const pageVariants = {
 };
 
 function Router() {
+  const currentPath = useBasePath();
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -49,8 +71,10 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
-      <Toaster />
+      <WouterRouter base="/ai-engineer-blog">
+        <Router />
+        <Toaster />
+      </WouterRouter>
     </QueryClientProvider>
   );
 }
