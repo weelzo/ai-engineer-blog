@@ -10,8 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* About */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">About This Blog</h3>
-            <p className="text-muted-foreground">
+            <h3 className="text-gray-800 dark:text-white text-lg font-semibold mb-4">About This Blog</h3>
+            <p className="text-gray-800 dark:text-gray-400">
               Exploring AI, Machine Learning, and Deep Learning through practical
               examples and insights.
             </p>
@@ -19,20 +19,20 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-gray-800 dark:text-white text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
               <Link href="/posts">
-                <span className="block text-muted-foreground hover:text-[#00ff9d] transition-colors">
+                <span className="block text-gray-800 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-[#00ff9d] transition-colors">
                   All Posts
                 </span>
               </Link>
               <Link href="/projects">
-                <span className="block text-muted-foreground hover:text-[#00ff9d] transition-colors">
+                <span className="block text-gray-800 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-[#00ff9d] transition-colors">
                   Projects
                 </span>
               </Link>
               <Link href="/about">
-                <span className="block text-muted-foreground hover:text-[#00ff9d] transition-colors">
+                <span className="block text-gray-800 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-[#00ff9d] transition-colors">
                   About Me
                 </span>
               </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
+            <h3 className="text-gray-800 dark:text-white text-lg font-semibold mb-4">Newsletter</h3>
             <div className="flex gap-2">
               <Input
                 type="email"
@@ -55,7 +55,7 @@ export default function Footer() {
                 href="https://github.com/weelzo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-[#00ff9d] transition-colors"
+                className="text-gray-800 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-[#00ff9d] transition-colors"
               >
                 <SiGithub size={24} />
               </a>
@@ -63,7 +63,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/wael-feriz/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-[#00ff9d] transition-colors"
+                className="text-gray-800 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-[#00ff9d] transition-colors"
               >
                 <SiLinkedin size={24} />
               </a>
@@ -71,7 +71,7 @@ export default function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-[#00ff9d] transition-colors"
+                className="text-gray-800 hover:text-emerald-600 dark:text-gray-400 dark:hover:text-[#00ff9d] transition-colors"
               >
                 <SiX size={24} />
               </a>
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
+        <div className="mt-8 pt-8 border-t border-border text-center text-sm text-gray-800 dark:text-gray-400">
           <p>© {new Date().getFullYear()} AI Engineer Blog. All rights reserved.</p>
         </div>
       </div>

@@ -3,7 +3,7 @@ interface Post {
     slug: string;
     title: string;
     excerpt: string;
-    date: string;
+    // date: string;
     tags: string[];
     content: string;
   }
@@ -14,7 +14,7 @@ interface Post {
       slug: 'reimagining-transformer',
       title: 'Reimagining the Transformer',
       excerpt: 'Beyond Conventional Explanations...',
-      date: '2024-10-02',
+      // date: '2024-10-02',
       tags: ['NLP', 'Transformers', 'Deep Learning'],
       content: '' // Will be loaded from markdown file
     },
@@ -23,7 +23,7 @@ interface Post {
       slug: 'implementing-clip',
       title: 'Implementing CLIP in PyTorch',
       excerpt: 'Step-by-step guide to implementing OpenAI\'s CLIP model for vision-language tasks...',
-      date: '2024-01-10',
+      // date: '2024-01-10',
       tags: ['Computer Vision', 'PyTorch', 'MultiModal'],
       content: '' // Will be loaded from markdown file
     },
@@ -32,7 +32,7 @@ interface Post {
       slug: 'fine-tuning-llms',
       title: 'Fine-tuning LLMs: Best Practices',
       excerpt: 'Learn the best practices and common pitfalls when fine-tuning large language models...',
-      date: '2024-01-05',
+      // date: '2024-01-05',
       tags: ['LLM', 'Fine-tuning', 'NLP'],
       content: '' // Will be loaded from markdown file
     }
