@@ -11,7 +11,7 @@ const PROJECTS = [
     github: "https://github.com/weelzo/ai-agnet-debate-tournament",
   },
   {
-    title: "OmniQueryn",
+    title: "OmniQuery",
     description: "A Multimodal Retrieval-Augmented Generation (RAG)",
     technologies: ["Python", "FAISS", "Sentence Transformers", "Tesseract OCR"],
     github: "https://github.com/weelzo/omni-query",
