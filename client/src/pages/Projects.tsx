@@ -5,16 +5,16 @@ import { SiGithub } from "react-icons/si";
 
 const ALL_PROJECTS = [
   {
-    title: "GPT-4 Fine-tuning Framework",
-    description: "A framework for fine-tuning GPT-4 models on custom datasets",
-    technologies: ["Python", "PyTorch", "Transformers"],
-    github: "https://github.com/username/gpt4-finetuning",
+    title: "AI Agent Debate Tournament",
+    description: "Experimental systems where AI models argue ethical dilemmas, ensuring diverse perspectives before deployment.",
+    technologies: ["Python", "Langchain", "Transformers"],
+    github: "https://github.com/weelzo/ai-agnet-debate-tournament",
   },
   {
-    title: "Vision Transformer Implementation",
-    description: "Pure PyTorch implementation of Vision Transformer (ViT)",
-    technologies: ["Python", "PyTorch", "Computer Vision"],
-    github: "https://github.com/username/vision-transformer",
+    title: "OmniQueryn",
+    description: "A Multimodal Retrieval-Augmented Generation (RAG)",
+    technologies: ["Python", "FAISS", "Sentence Transformers", "Tesseract OCR"],
+    github: "https://github.com/weelzo/omni-query",
   },
   {
     title: "AI Research Paper Summarizer",
